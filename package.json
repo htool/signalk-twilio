@@ -1,7 +1,7 @@
 {
-  "name": "signalk-notify",
+  "name": "signalk-twilio",
   "version": "1.0.0",
-  "description": "simple package to send notifications when an event is triggered",
+  "description": "simple package to send sms notifications when an event is triggered",
   "main": "index.js",
   "keywords": [
     "signalk-node-server-plugin"
