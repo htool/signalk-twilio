@@ -1,7 +1,6 @@
 const twilio = require('twilio');
 const PLUGIN_ID = 'signalk-twilio';
 const PLUGIN_NAME = 'Signalk twilio';
-const SENDER_NAME = 'code kilo';
 var unsubscribes = [];
 module.exports = function(app) {
   var plugin = {};
@@ -18,19 +17,19 @@ module.exports = function(app) {
     let authToken = options.account.token;
     let from = options.account.from;
     let client = twilio(accountSid, authToken);
-    options.notifications.forEach(option => listen(option, client, from));
+    options.notifications.forEach(option => listen(option, client, from, options.name));
 
     app.setProviderStatus('Running');
 
 
   };
 
-  function listen(option, client, from) {
+  function listen(option, client, from, name) {
     let _notify = function(event) {
       option.recipients.forEach(recipient => {
         client.messages
           .create({
-            body: `Alert from ${SENDER_NAME}: ${option.message}`,
+            body: `Alert from ${name}: ${option.message}`,
             from: from,
             to: recipient
           })
@@ -55,6 +54,10 @@ module.exports = function(app) {
     title: PLUGIN_NAME,
     type: 'object',
     properties: {
+      name: {
+        type: 'string',
+        title: 'sender name'
+      },
       account: {
         type: 'object',
         required: ['Sid', 'token', 'from'],

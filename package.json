@@ -1,5 +1,5 @@
 {
-  "name": "signalk-twilio",
+  "name": "@codekilo/signalk-twilio-notifications",
   "version": "1.0.0",
   "description": "simple package to send sms notifications when an event is triggered",
   "main": "index.js",
@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Albert Smit <albertsmit93@gmail.com>",
   "license": "MIT",
   "dependencies": {
     "twilio": "^3.39.5"

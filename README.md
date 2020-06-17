@@ -2,24 +2,7 @@
 
 This package is designed to send an SMS notification when an event occurs on the server
 
-## Installation
-
-To install this package clone it from git and run npm link.
-
-```
-git clone https://github.com/codekilo/signalk-twilio.git
-cd signalk-twilio
-sudo npm link
-```
-
-Then go to the SignalK configuration directory (probably `~/.signalk`)  and link the module again:
-
-```
-$ cd .signalk 
-$ npm link signalk-twilio
-```
-
-## configuration
+## Configuration
 
 The plugin has the following required options: 
 
@@ -44,5 +27,19 @@ The message to send with the notifications
 A list of phone numbers to notify when this event occurs
 
 
-## use
+## Development
 
+To install this package for development clone it from git and run npm link.
+
+```
+git clone https://github.com/codekilo/signalk-twilio.git
+cd signalk-twilio
+sudo npm link
+```
+
+Then go to the SignalK configuration directory (probably `~/.signalk`)  and link the module again:
+
+```
+$ cd .signalk 
+$ npm link @codekilo/signalk-twilio-notifications
+```
