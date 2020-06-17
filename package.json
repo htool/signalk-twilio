@@ -1,6 +1,6 @@
 {
   "name": "@codekilo/signalk-twilio-notifications",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "simple package to send sms notifications when an event is triggered",
   "main": "index.js",
   "keywords": [

@@ -1,6 +1,6 @@
 const twilio = require('twilio');
-const PLUGIN_ID = 'signalk-twilio';
-const PLUGIN_NAME = 'Signalk twilio';
+const PLUGIN_ID = 'signalk-twilio-notifications';
+const PLUGIN_NAME = 'Signalk twilio notifications';
 var unsubscribes = [];
 module.exports = function(app) {
   var plugin = {};
