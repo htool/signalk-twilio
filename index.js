@@ -19,7 +19,7 @@ module.exports = function(app) {
     let client = twilio(accountSid, authToken);
     options.notifications.forEach(option => listen(option, client, from, options.name));
 
-    app.setProviderStatus('Running');
+    app.setPluginStatus('Running');
 
 
   };
@@ -47,7 +47,7 @@ module.exports = function(app) {
     // Here we put logic we need when the plugin stops
     app.debug('Plugin stopped');
     unsubscribes.forEach(f => f());
-    app.setProviderStatus('Stopped');
+    app.setPluginStatus('Stopped');
   };
 
   plugin.schema = {
